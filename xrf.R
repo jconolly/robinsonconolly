@@ -26,6 +26,9 @@ autoplot(pca_res, data = xrf, colour = 'Period')
 pca_res <- prcomp(xrf[,c(16,18,7,6,20,13,10)], scale. = TRUE)
 autoplot(pca_res, data = xrf, colour = 'Region')
 ## PLOTS FOR PUBLICATION
+# Scree
+plot(c(1:7),pca_res$sdev^2, xlab="Principal component", ylab="Eigenvalue")
+lines(c(1:7),pca_res$sdev^2)
 # PCA by Period
 plot(pca_res$x[,1], pca_res$x[,2], pch=c(21,19)[as.numeric(xrf$Period)], xlab="PC1 [30.9%]", ylab="PC2 [27.4%]")
 legend("topleft", 
