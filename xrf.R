@@ -1,4 +1,3 @@
-setwd("~/Documents/Research/Ontario/KawarthaArchaeology/pubs/CeramicPetrography/data")
 library(MASS)
 library(ggfortify)
 library(MuMIn)
